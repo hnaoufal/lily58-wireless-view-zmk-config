@@ -22,11 +22,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                          &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                          &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LGUI  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RGUI
+&kp ESC    &kp AMPERSAND  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS                          &kp EQUAL  &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp PLUS  &kp RIGHT_BRACKET  &kp EXCLAMATION
+&kp TAB    &kp SEMICOLON  &kp COMMA         &kp PERIOD      &kp P            &kp Y                                         &kp F      &kp G         &kp C                  &kp R     &kp L              &kp SLASH
+&kp LCTRL  &kp A          &kp O             &kp E           &kp U            &kp I                                         &kp D      &kp H         &kp T                  &kp N     &kp MINUS          &kp NON_US_BACKSLASH
+&kp LSHFT  &kp SQT        &kp Q             &kp J           &kp K            &kp X                 &kp DOLLAR    &kp HASH  &kp B      &kp M         &kp W                  &kp V     &kp Z              &kp RSHFT
+                                            &kp LALT        &kp LGUI         &mo 1                 &kp SPACE     &kp RET   &mo 2      &kp BSPC      &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
