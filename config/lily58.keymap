@@ -52,6 +52,83 @@
             bindings = <&kp LC(A) &kp COLON &kp R &kp E &kp S &kp I &kp Z &kp E &kp P &kp SPACE &kp MINUS &kp LS(D) &kp SPACE &kp NUMBER_1 &kp NUMBER_2 &kp RET>;
             label = "RESIZEDS";
         };
+
+        mUp: mUp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp K>;
+            label = "MUP";
+        };
+
+        mDown: moveD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp J>;
+            label = "MOVED";
+        };
+
+        mLeft: mLeft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp H>;
+            label = "MLEFT";
+        };
+
+        mRight: mRight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp L>;
+            label = "MRIGHT";
+        };
+
+        cheat: cheat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp I>;
+            label = "CHEAT";
+        };
+
+        vG: vG {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LS(G)>;
+            label = "VG";
+        };
+
+        vC: vC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LS(C)>;
+            label = "VC";
+        };
+
+        vR: vR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LS(R)>;
+            label = "VR";
+        };
+
+        vY: vY {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LS(Y)>;
+            label = "VY";
+        };
+
+        vL: vL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LS(L)>;
+            label = "VL";
+        };
+
+        vy: vy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp Y>;
+            label = "VY";
+        };
     };
 
     keymap {
@@ -107,11 +184,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans     &trans    &trans          &trans        &trans                          &trans  &trans    &trans    &trans  &trans     &trans
-&trans  &trans     &trans    &trans          &trans        &trans                          &trans  &trans    &trans    &trans  &trans     &trans
-&trans  &resizeDS  &resizeD  &splitV         &splitH       &trans                          &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans  &trans     &trans    &kp DOWN_ARROW  &kp UP_ARROW  &kp UP_ARROW  &trans    &trans  &trans  &trans    &trans    &trans  &trans     &trans
-                             &trans          &trans        &trans        &trans    &trans  &trans  &trans    &trans
+&trans  &trans     &trans    &trans          &trans        &vL                                  &trans  &trans    &trans    &trans  &trans           &trans
+&vY     &vy        &vR       &vC             &vG           &cheat                               &trans  &mLeft    &mRight   &trans  &kp RIGHT_ARROW  &trans
+&trans  &resizeDS  &resizeD  &splitV         &splitH       &trans                               &mUp    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT        &trans
+&trans  &trans     &trans    &kp DOWN_ARROW  &kp UP_ARROW  &kp UP_ARROW   &mLeft       &mRight  &mDown  &trans    &trans    &trans  &trans           &trans
+                             &trans          &trans        &kp BACKSPACE  &kp ENTER    &trans   &trans  &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
