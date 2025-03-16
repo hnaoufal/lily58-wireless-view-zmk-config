@@ -122,13 +122,6 @@
             bindings = <&kp LC(A) &kp LS(L)>;
             label = "VL";
         };
-
-        vy_small: vy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp Y>;
-            label = "VY";
-        };
     };
 
     keymap {
