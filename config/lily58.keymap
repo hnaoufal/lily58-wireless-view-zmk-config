@@ -18,7 +18,7 @@
         };
 
         cp_to_clip {
-            bindings = <&kp LG(LS(LA(NUMBER_4)))>;
+            bindings = <&kp LS(LG(LC(NUMBER_4)))>;
             key-positions = <4>;
             layers = <1>;
         };
