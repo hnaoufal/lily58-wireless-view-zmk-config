@@ -122,6 +122,13 @@
             bindings = <&kp LC(A) &kp LS(L)>;
             label = "VL";
         };
+
+        v_y_small: v_y_small {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp Y>;
+            label = "V_Y_SMALL";
+        };
     };
 
     keymap {
@@ -177,11 +184,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans     &trans    &trans          &trans        &vL                                  &trans  &trans    &trans    &trans  &trans           &trans
-&vY     &vy_small  &vR       &vC             &vG           &cheat                               &trans  &mLeft    &mRight   &trans  &kp RIGHT_ARROW  &trans
-&trans  &resizeDS  &resizeD  &splitV         &splitH       &trans                               &mUp    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT        &trans
-&trans  &trans     &trans    &kp DOWN_ARROW  &kp UP_ARROW  &kp UP_ARROW   &mLeft       &mRight  &mDown  &trans    &trans    &trans  &trans           &trans
-                             &trans          &trans        &kp BACKSPACE  &kp ENTER    &trans   &trans  &trans    &trans
+&trans  &trans      &trans    &trans          &trans        &vL                                  &trans  &trans    &trans    &trans  &trans           &trans
+&vY     &v_y_small  &vR       &vC             &vG           &cheat                               &trans  &mLeft    &mRight   &trans  &kp RIGHT_ARROW  &trans
+&trans  &resizeDS   &resizeD  &splitV         &splitH       &trans                               &mUp    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT        &trans
+&trans  &trans      &trans    &kp DOWN_ARROW  &kp UP_ARROW  &kp UP_ARROW   &mLeft       &mRight  &mDown  &trans    &trans    &trans  &trans           &trans
+                              &trans          &trans        &kp BACKSPACE  &kp ENTER    &trans   &trans  &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
