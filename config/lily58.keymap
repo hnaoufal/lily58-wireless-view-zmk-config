@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -184,7 +185,7 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans      &trans    &trans          &trans        &vL                                  &trans  &trans    &trans    &trans  &trans           &trans
+&trans  &trans      &trans    &trans          &trans        &vL                                  &trans  &trans    &trans    &trans  &trans           &bt BT_CLR_ALL
 &vY     &v_y_small  &vR       &vC             &vG           &cheat                               &trans  &mLeft    &mRight   &trans  &kp RIGHT_ARROW  &trans
 &trans  &resizeDS   &resizeD  &splitV         &splitH       &trans                               &mUp    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT        &trans
 &trans  &trans      &trans    &kp DOWN_ARROW  &kp UP_ARROW  &kp UP_ARROW   &mLeft       &mRight  &mDown  &trans    &trans    &trans  &trans           &trans
